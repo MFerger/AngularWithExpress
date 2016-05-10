@@ -1,8 +1,16 @@
 <h1>Pirates</h1>
 
+<form ng-submit='createPirates(pirate)'>
+  <input type="text" name="name" ng-model='pirate.name' placeholder='enter some pirate name'>
+  <input type="text" name="poison" ng-model='pirate.poison' placeholder='enter some pirate poison'>
+  <input type="text" name="accessory" ng-model='pirate.accessory' placeholder='enter some accessory'>
+  <button type="submit" name="button">Add the pirate</button>
+</form>
+
+
 <div ng-repeat='pirate in pirates'>
   <h1>Name: {{pirate.name}}</h1>
-  <h1>Poison: {{pirate.poison}}</h1>
-  <h1>Accessory: {{pirate.accessory}}</h1>
+  <p>Poison: {{pirate.poison}}</p>
+  <p>Accessory: {{pirate.accessory}}</p>
   <br>
 </div>
